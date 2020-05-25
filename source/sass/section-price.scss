@@ -1,0 +1,147 @@
+.section-price {
+  @include center();
+  position: relative;
+  padding: 100px 0 60px;
+  background-color: #f2f2f2;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center -30px;
+
+  overflow: hidden;
+}
+
+.section-price__slides-container {
+  overflow: hidden;
+  margin: 30px 0;
+  padding: 0 20px;
+}
+
+.section-price__table {
+  @include center();
+  width: 100%;
+  border-collapse: collapse;
+
+  transform: translate(-33.3%);
+}
+
+.section-price__title {
+  height: 100px;
+  min-width: 277px;
+
+  color: white;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-family: "Open Sans Light", "Arial", "Helvetica", sans-serif;
+
+  background-color: #283645;
+  border: 2px solid #e5e5e5;
+
+  &--hit {
+    position: relative;
+  }
+
+  &--hit::before {
+    content: "";
+    position: absolute;
+    top: -37px;
+    left: -44px;
+    width: 45px;
+    height: 30px;
+    transform: rotate(-45deg);
+    background-color: transparent;
+    border-style: solid;
+    border-width: 27px;
+    border-color: transparent transparent #d22856;
+  }
+
+  &--hit::after {
+    content: "ХИТ";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(-45deg);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.section-price__title-head {
+  font-family: "Open Sans Bold", "Arial", "Helvetica", sans-serif;
+  font-size: 18px;
+}
+
+.section-price__hidden-cell {
+  display: none;
+}
+
+.section-price__table-data {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  // padding: 14px 20px;
+  border: 2px solid #e5e5e5;
+  background: white;
+}
+
+.section-price__table-data-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 22px;
+  padding-right: 17px;
+}
+
+.section-price__hidden-text {
+  display: flex;
+  align-items: center;
+}
+
+.section-price__check-icon {
+  width: 25px;
+  height: 25px;
+
+  &--yes {
+    fill: #3dc644;
+  }
+
+  &--no {
+    fill: #f25b26;
+  }
+}
+
+.section-price__button-block {
+  padding-top: 18px;
+}
+
+@media (min-width: 660px) {
+  .section-price__table {
+    transform: translate(0);
+  }
+
+  .section-price__hidden-cell {
+    display: table-cell;
+  }
+
+  .section-price__hidden-text {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-contacts {
+    @include desktop-container();
+  }
+
+  .section-contacts__item {
+    width: 33.3%;
+  }
+
+  .section-contacts__item:nth-of-type(2) {
+    order: 2;
+  }
+}

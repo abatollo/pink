@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Батолло](https://up.htmlacademy.ru/adaptive/19/user/65755).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Пономарёва](https://up.htmlacademy.ru/htmlcss/27/user/153610).
 
 ---
 

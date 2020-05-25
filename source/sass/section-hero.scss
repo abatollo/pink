@@ -1,0 +1,123 @@
+.section-hero {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #1d2631;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  // background-position: left top 176px, center top;
+  background-position: left top 175px, top center;
+  background-repeat: no-repeat;
+}
+
+.section-hero__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.section-hero__heading {
+  margin-top: 90px;
+
+  color: white;
+  font-family: "Open Sans Light", "Arial", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+}
+
+@media (min-width: 660px) {
+  .section-hero {
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  .section-hero__container {
+    width: 660px;
+  }
+
+  .section-hero__heading {
+    max-width: 300px;
+    margin-top: 213px;
+    font-size: 40px;
+  }
+
+  .section-hero__big-link {
+    max-width: 300px;
+  }
+
+  .section-hero__list {
+    max-width: 300px;
+  }
+
+  .section-hero__text {
+    max-width: 300px;
+  }
+}
+
+.section-hero__big-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  margin-top: 323px;
+
+  color: white;
+  font-family: "Open Sans Bold", "Arial", "Helvetica", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+
+  border: 3px solid white;
+  border-radius: 27.5px;
+}
+
+.section-hero__list {
+  display: flex;
+  justify-content: space-between;
+
+  @include list-reset();
+
+  padding-top: 32px;
+  padding-right: 36px;
+  padding-bottom: 24px;
+  padding-left: 37px;
+}
+
+.section-hero__small-link {
+  display: block;
+  width: 47px;
+  height: 56px;
+
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &--apple {
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--android {
+    background-image: url("../img/logo-android.svg");
+  }
+
+  &--microsoft {
+    background-image: url("../img/logo-microsoft.svg");
+  }
+}
+
+.section-hero__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  color: white;
+  text-align: center;
+  font-family: "Open Sans Light", "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+@media (min-width: 660px) {
+}
+
+@media (min-width: 1200px) {
+}
