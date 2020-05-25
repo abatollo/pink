@@ -1,0 +1,9 @@
+.main-nav__list {
+  margin-top: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__list {
+    margin-top: 27px;
+  }
+}

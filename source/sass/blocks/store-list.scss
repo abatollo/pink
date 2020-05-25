@@ -1,0 +1,36 @@
+.store-list {
+  @include list-none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  max-width: 300px;
+}
+
+.store-list__item {
+  margin-left: 37px;
+
+  &--apple {
+    width: 46px;
+    height: 56px;
+    margin-left: 0;
+  }
+
+  &--android {
+    width: 42px;
+    height: 47px;
+  }
+
+  &--micr {
+    width: 43px;
+
+    height: 41px;
+  }
+}
+
+.store-list__os {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

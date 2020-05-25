@@ -1,0 +1,67 @@
+@mixin font-settings($size: 14px, $line: 30px, $weight: normal) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+}
+
+@mixin indent-zero {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-none {
+  list-style: none;
+}
+
+@mixin page-padding($indent: 20px) {
+  padding-left: $indent;
+  padding-right: $indent;
+}
+
+@mixin fieldset {
+  margin: 0;
+  text-align: left;
+}
+
+@mixin border-radius($radius: 2px) {
+  border-radius: $radius;
+}
+
+@mixin placeholder-kit {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin placeholder-moz {
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+}
+
+@mixin placeholder-ms {
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin range-thumb {
+  border: solid 2px $insistent-color;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &:active {
+    background-color: $insistent-color;
+  }
+}
