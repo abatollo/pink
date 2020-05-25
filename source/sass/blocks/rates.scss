@@ -1,0 +1,243 @@
+.rates {
+  border: none;
+  padding-top: 93px;
+  width: 100%;
+  background-color: $texture-color;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 1200px 95px;
+}
+
+.rates__wrapper {
+  width: 320px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.rates__list {
+  transform: translateX(-542px);
+  border-collapse: collapse;
+  background-color: #ffffff;
+  width: 100%;
+
+  td {
+    width: 281px;
+    border-top: none;
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+  }
+}
+
+.rates__item {
+  display: flex;
+
+  &--top {
+    background-color: $base-color;
+    border-bottom: none;
+  }
+}
+
+.rates__caption {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 16px 20px 22px;
+  border: solid 2px #e5e5e5;
+
+  &--hit::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 74px;
+    height: 74px;
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-size: 74px auto;
+  }
+
+  &--hit::before {
+    content: "ХИТ";
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+.rates__title {
+  @include font-settings(18px, 30px, bold);
+  @include indent-zero;
+  text-transform: uppercase;
+}
+
+.rates__price {
+  @include font-settings(24px, 30px, 300);
+}
+
+.rates__function {
+  @include font-settings;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  box-sizing: border-box;
+  border: solid 2px #e5e5e5;
+
+  span {
+    display: inline;
+  }
+}
+
+.rates__func-on {
+  fill: #3dc644;
+}
+
+.rates__func-off {
+  fill: $insistent-color;
+}
+
+.rates__toggles {
+  background-color: $texture-color;
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: $tablet-width) {
+  .rates {
+    padding-top: 88px;
+  }
+
+  .rates__function {
+    position: relative;
+    text-transform: inherit;
+    padding: 8px 10px 7px 13px;
+
+    &:not(.rates__function--mob) {
+      justify-content: center;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .rates__wrapper {
+    @include page-padding;
+    width: auto;
+    height: 100%;
+    box-sizing: content-box;
+  }
+
+  .rates__list {
+    transform: translateX(0);
+    width: 100%;
+    margin-bottom: 70px;
+
+    td {
+      flex-grow: 1;
+      width: 155px;
+    }
+  }
+
+  .rates__caption {
+    padding: 15px 15px 9px;
+    border-bottom: none;
+
+    &--hit::after {
+      content: "";
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/bg-hit-tablet.svg");
+      background-size: 61px auto;
+    }
+
+    &--hit::before {
+      content: "ХИТ";
+      top: 20px;
+      left: 5px;
+    }
+
+    &--none {
+      background-color: $texture-color;
+      border: solid 2px $texture-color;
+      border-bottom: solid 2px #e5e5e5;
+    }
+  }
+
+  .rates__title {
+    @include font-settings(16px, 24px, bold);
+  }
+
+  .rates__price {
+    font-size: 18px;
+  }
+
+  .rates__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rates {
+    padding-top: 148px;
+    background-size: 100%;
+  }
+
+  .rates__wrapper {
+    @include page-padding(10px);
+    width: 960px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .rates__list {
+    margin-bottom: 95px;
+
+    td {
+      min-width: 234px;
+    }
+  }
+
+  .rates__title {
+    @include font-settings(18px, 30px, bold);
+  }
+
+  .rates__price {
+    @include font-settings(24px, 30px, 300);
+  }
+
+  .rates__caption {
+    min-width: 233px;
+    padding: 16px 20px 22px;
+    border-bottom: none;
+
+    &--hit::after {
+      content: "";
+      width: 74px;
+      height: 74px;
+      background-image: url("../img/bg-hit.svg");
+      background-size: 74px auto;
+    }
+
+    &--hit::before {
+      content: "ХИТ";
+      top: 25px;
+      left: 10px;
+    }
+  }
+
+  .rates__function {
+    font-size: 18px;
+    padding: 14px 20px 15px;
+    box-sizing: border-box;
+    border-top: none;
+  }
+}

@@ -1,0 +1,231 @@
+.contacts__wrapper {
+  @include page-padding;
+  position: relative;
+  background-color: #ffffff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -76px;
+    left: 0;
+    z-index: 1;
+    height: 123px;
+    width: 100%;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 1200px;
+  }
+}
+
+.contacts__intro {
+  padding-top: 43px;
+  margin-bottom: 35px;
+}
+
+.contacts__text {
+  @include font-settings(24px, 28px, 300);
+  @include indent-zero;
+}
+
+.contacts__list {
+  @include list-none;
+  @include indent-zero;
+  position: relative;
+  z-index: 4;
+}
+
+.contacts__item {
+  margin-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(2) {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__action {
+  @include font-settings(18px, 24px, bold);
+  margin-bottom: 2px;
+}
+
+.contacts__note {
+  @include font-settings(24px, 26px, 300);
+  text-decoration: none;
+  width: auto;
+  margin: 0 auto;
+  color: $insistent-color;
+
+  &--mail {
+    &:hover {
+      text-decoration: underline;
+      color: $base-color;
+    }
+
+    &:active {
+      color: $base-color;
+      text-decoration: none;
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts__map {
+  height: 203px;
+  position: relative;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 320px auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+}
+
+.contacts__iframe {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    &::after {
+      content: "";
+      bottom: -68px;
+    }
+  }
+
+  .contacts__text {
+    @include font-settings(40px, 47px, 300);
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contacts__item {
+    min-height: 75px;
+
+    &:not(:last-child) {
+      min-width: 50%;
+    }
+
+    &:last-child {
+      width: 260px;
+      margin-bottom: 26px;
+    }
+  }
+
+  .contacts__action {
+    margin: 0 auto 10px;
+  }
+
+  .contacts__note {
+    margin: 0 auto;
+  }
+
+  .contacts__intro {
+    padding-top: 46px;
+    margin-bottom: 45px;
+  }
+
+  .contacts__map {
+    height: 377px;
+    width: 100%;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 700px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+  }
+
+  .contacts__iframe {
+    height: 377px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__text {
+    @include font-settings(50px, 60px, 300);
+  }
+
+  .contacts__wrapper {
+    @include page-padding(0);
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+
+    &::after {
+      content: "";
+      bottom: -100px;
+      left: 0;
+      height: 130px;
+      width: 100%;
+      background-image: url("../img/bg-triangle-white-footer.svg");
+      background-size: 1440px 110px;
+    }
+  }
+
+  .contacts__list {
+    @include page-padding(10px);
+    width: 960px;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .contacts__item {
+    margin-bottom: 22px;
+
+    &:first-child {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:not(:last-child) {
+      min-width: 30%;
+    }
+
+    &:last-child {
+      flex-grow: 0;
+      order: 2;
+      min-width: 238px;
+      margin-bottom: 22px;
+    }
+  }
+
+  .contacts__action {
+    margin: 0 auto 27px;
+  }
+
+  .contacts__intro {
+    padding-top: 64px;
+    margin-bottom: 56px;
+  }
+
+  .contacts__map {
+    height: 504px;
+    width: 100%;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1200px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+  }
+
+  .contacts__iframe {
+    height: 504px;
+  }
+}

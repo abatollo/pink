@@ -1,0 +1,35 @@
+.photo__intro {
+  padding: 45px 20px 20px;
+  margin-bottom: 14px;
+}
+
+.photo__text-intro {
+  @include font-settings;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 0 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .photo__intro {
+    padding-top: 93px;
+    padding-bottom: 44px;
+    margin-bottom: 31px;
+  }
+
+  .photo__text-intro {
+    font-size: 18px;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__intro {
+    margin-bottom: 43px;
+  }
+
+  .photo__text-intro {
+    max-width: 600px;
+  }
+}
