@@ -1,95 +1,128 @@
-.logo__mob-header {
-  fill: #ffffff;
+/* Управление видимостью */
+
+/* Текст виден всегда */
+
+.logo__text {
+  display: inline;
 }
 
-.logo[href]:hover .logo__mob-header {
-  fill: $insistent-color;
+/* Очки видны всегда, но в шапке они прозрачные и задвинуты */
+
+.logo__glasses {
+  display: inline;
 }
 
-.logo[href]:active .logo__mob-header {
-  fill: #ffffff;
+.logo--header {
+  fill: transparent;
+}
+
+.logo--header .logo__container {
+  transform: translate(-66px,-11px);
+}
+
+/* В шапке на планшете вместо прозрачности очки получают цвет и выдвигаются обратно */
+
+@media (min-width: 400px) {
+  .logo--header {
+      fill: #ffffff;
+  }
+
+  .logo--header .logo__container {
+      transform: translate(0);
+  }
+}
+
+/* Очки подо звёзды, одиночная звезда и группа звёзд изначально не видны */
+
+.logo__glasses-sparkles {
+  display: none;
+}
+
+.logo__sparkle {
+  display: none;
+}
+
+.logo__sparkles {
+  display: none;
+}
+
+/* Показываем их только на десктопе, а  */
+
+@media (min-width: 600px) {
+  .logo__glasses-sparkles {
+      display: inline;
+  }
+
+  .logo__sparkle {
+      display: inline;
+  }
+
+  .logo__sparkles {
+      display: inline;
+  }
+
+  .logo__glasses {
+      display: none;
+  }
+}
+
+/* Управление цветом */
+
+/* Изначально в шапке текст — белый, очки — прозрачные */
+
+.logo--header {
+  color: #ffffff;
+  fill: transparent;
+}
+
+/* Изначально в подвале текст — чёрный, очки — красные */
+
+.logo--footer {
+  color: #000000;
+  fill: #d22856;
+}
+
+/* На планшете в шапке текст — белый, очки — белые */
+/* На планшете в подвале текст — чёрный, очки — красные  */
+
+@media (min-width: 400px) {
+  .logo--header {
+      fill: #ffffff;
+  }
+
+  .logo--header .logo__container {
+      transform: translate(0);
+  }
+}
+
+/* На компьютере в шапке текст — белый, очки для блёсток — белые,
+единичная блёстка — красная, группа блёсток — красная */
+
+/* На компьютере в подвале текст — чёрный, очки для блёсток — красные,
+единичная блёстка — красная, группа блёсток — чёрная */
+
+@media (min-width: 600px) {
+  .logo--header {
+      color: #ffffff;
+      fill: #d22856;
+  }
+
+  .logo--footer {
+      color: #d22856;
+      fill: #000000;
+  }
+}
+
+.logo[href]:hover {
+  color: #d22856;
+}
+
+.logo[href]:active {
+  color: #ffffff;
   opacity: 0.3;
 }
 
-.logo__mob-footer {
-  color: $base-color;
-}
-
-.logo[href]:hover .logo__mob-footer {
-  color: $insistent-color;
-}
-
-.logo[href]:active .logo__mob-footer {
-  color: $base-color;
+.logo--footer[href]:active {
+  color: #000000;
   opacity: 0.3;
-}
-
-.logo__tab-header {
-  display: none;
-}
-
-.logo__desc-header {
-  display: none;
-}
-
-.logo__desc-footer {
-  display: none;
-}
-
-@media (min-width: $tablet-width) {
-  .logo__mob-header {
-    display: none;
-  }
-
-  .logo__tab-header {
-    display: inline;
-    fill: #ffffff;
-  }
-
-  .logo[href]:hover .logo__tab-header {
-    fill: $insistent-color;
-  }
-
-  .logo[href]:active .logo__tab-header {
-    fill: #ffffff;
-    opacity: 0.3;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .logo__tab-header {
-    display: none;
-  }
-
-  .logo__desc-header {
-    display: inline;
-    color: #ffffff;
-  }
-
-  .logo[href]:hover .logo__desc-header {
-    color: $insistent-color;
-  }
-
-  .logo[href]:active .logo__desc-header {
-    color: #ffffff;
-    opacity: 0.3;
-  }
-
-  .logo__mob-footer {
-    display: none;
-  }
-
-  .logo__desc-footer {
-    display: inline;
-    color: $base-color;
-  }
-
-  .logo[href]:hover .logo__desc-footer {
-    color: $insistent-color;
-  }
-
-  .logo[href]:active .logo__desc-footer {
-    color: #000000;
-    opacity: 0.3;
-  }
 }
