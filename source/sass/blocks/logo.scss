@@ -22,7 +22,7 @@
 
 /* В шапке на планшете вместо прозрачности очки получают цвет и выдвигаются обратно */
 
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .logo--header {
       fill: #ffffff;
   }
@@ -48,7 +48,7 @@
 
 /* Показываем их только на десктопе, а  */
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
   .logo__glasses-sparkles {
       display: inline;
   }
@@ -85,7 +85,7 @@
 /* На планшете в шапке текст — белый, очки — белые */
 /* На планшете в подвале текст — чёрный, очки — красные  */
 
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .logo--header {
       fill: #ffffff;
   }
@@ -101,15 +101,20 @@
 /* На компьютере в подвале текст — чёрный, очки для блёсток — красные,
 единичная блёстка — красная, группа блёсток — чёрная */
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
   .logo--header {
       color: #ffffff;
       fill: #d22856;
   }
 
   .logo--footer {
-      color: #d22856;
-      fill: #000000;
+      color: #000000;
+      fill: #d22856;
+  }
+
+  .logo__use-footer {
+    color: #d22856;
+    fill: #000000;
   }
 }
 
